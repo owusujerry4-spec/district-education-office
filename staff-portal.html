@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Portal - Offinso North Education Directorate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="GES LOGO.png" alt="GES Logo" class="ges-logo">
+            <h1>Offinso North Education Directorate - Staff Portal</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leadership.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="news.html" class="dropbtn">News</a>
+                <div class="dropdown-content">
+                    <a href="news.html#brief-history">Brief History</a>
+                    <a href="news.html#staff-schedules">Staff & Schedules</a>
+                    <a href="news.html#ongoing-activities">Ongoing Activities</a>
+                    <a href="news.html#achievements">Achievements</a>
+                    <a href="news.html#performance-analysis">Performance Analysis</a>
+                    <a href="news.html#upcoming-events">Upcoming Events</a>
+                    <a href="news.html#school-catalogue">School Catalogue</a>
+                    <a href="news.html#school-programmes">School Programmes and Residential Status</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="staff-portal.html">Staff Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="staff-portal">
+            <h2>Staff Portal</h2>
+            <p>Welcome to the Staff Portal. Please authenticate to access internal tools for communication, reporting, and data submission.</p>
+
+            <!-- Authentication Form -->
+            <div id="staff-auth" class="auth-section">
+                <h3>Staff Login</h3>
+                <form id="staff-login-form">
+                    <label for="staff-username">Username/Email:</label>
+                    <input type="text" id="staff-username" required>
+                    
+                    <label for="staff-password">Password:</label>
+                    <input type="password" id="staff-password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <p id="auth-message"></p>
+            </div>
+
+            <!-- Portal Dashboard (Hidden until authenticated) -->
+            <div id="portal-dashboard" class="portal-section" style="display: none;">
+                <h3>Dashboard</h3>
+                
+                <!-- Internal Communication -->
+                <div class="portal-card">
+                    <h4>Internal Communication</h4>
+                    <div class="message-board">
+                        <div id="messages-list">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                        <form id="send-message-form">
+                            <textarea id="message-text" placeholder="Type your message..." required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Reporting -->
+                <div class="portal-card">
+                    <h4>Reporting</h4>
+                    <div id="reports-list">
+                        <!-- Reports will be loaded here -->
+                    </div>
+                    <form id="submit-report-form">
+                        <label for="report-title">Report Title:</label>
+                        <input type="text" id="report-title" required>
+                        
+                        <label for="report-content">Report Content:</label>
+                        <textarea id="report-content" required></textarea>
+                        
+                        <button type="submit">Submit Report</button>
+                    </form>
+                </div>
+
+                <!-- Data Submission -->
+                <div class="portal-card">
+                    <h4>Data Submission</h4>
+                    <div id="data-submissions-list">
+                        <!-- Submissions will be loaded here -->
+                    </div>
+                    <form id="submit-data-form">
+                        <label for="data-type">Data Type:</label>
+                        <select id="data-type" required>
+                            <option value="">Select Type</option>
+                            <option value="attendance">Attendance Records</option>
+                            <option value="performance">Student Performance Data</option>
+                            <option value="inventory">Inventory/Supplies</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <label for="data-file">Upload File (CSV/Excel):</label>
+                        <input type="file" id="data-file" accept=".csv, .xlsx, .xls" required>
+                        
+                        <label for="data-description">Description:</label>
+                        <textarea id="data-description"></textarea>
+                        
+                        <button type="submit">Submit Data</button>
+                    </form>
+                </div>
+
+                <!-- Logout Button -->
+                <button id="logout-button" class="training-button">Logout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Offinso North Education Directorate. All rights reserved.</p>
+        <p>Email: offinsonorth@ges.gov.gh | Phone: +233 242 781 538</p>
+        <button id="back-to-top">↑ Back to Top</button>
+    </footer>
+</body>
+</html>

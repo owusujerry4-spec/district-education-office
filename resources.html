@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Offinso North Education Directorate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="GES LOGO.png" alt="GES Logo" class="ges-logo">
+            <h1>Offinso North Education Directorate</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leadership.html">About Us</a></li>
+             <li class="dropdown">
+                <a href="news.html" class="dropbtn">News</a>
+                <div class="dropdown-content">
+                    <a href="news.html#brief-history">Brief History</a>
+                    <a href="news.html#staff-schedules">Staff & Schedules</a>
+                    <a href="news.html#ongoing-activities">Ongoing Activities</a>
+                    <a href="news.html#achievements">Achievements</a>
+                    <a href="news.html#performance-analysis">Performance Analysis</a>
+                    <a href="news.html#upcoming-events">Upcoming Events</a>
+                    <a href="news.html#school-catalogue">School Catalogue</a>
+                    <a href="news.html#school-programmes">School Programmes and Residential Status</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+             <li><a href="staff-portal.html">Staff Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Resources</h2>
+            <div id="admin-auth">
+                <input type="password" id="admin-password" placeholder="Enter admin password" aria-label="Admin password">
+                <button id="auth-button" aria-label="Unlock Upload Forms">Unlock Upload Forms</button>
+            </div>
+
+          <form id="resource-form" style="display: none;">
+                <input type="file" id="resource-file" accept="application/pdf" aria-label="Upload PDF resource">
+                <textarea id="resource-description" placeholder="Resource description" aria-label="Resource description"></textarea>
+                <button type="submit" aria-label="Upload Resource">Upload Resource</button>
+            </form>
+            
+            <h3>Available Resources</h3>
+            <a href="https://bit.ly/GESPROMOTION25" class="resource-button" aria-label="Download Sample Resource">GES Promotion link</a>
+            <ul class="resource-items"></ul>
+        </section>
+           </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Offinso North Education Directorate. All rights reserved.</p>
+        <p>Email: offinsonorth@ges.gov.gh | Phone: +233 242 781 538</p>
+        <button id="back-to-top" aria-label="Back to Top">↑ Back to Top</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

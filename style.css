@@ -1,0 +1,1023 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+body.fade-in {
+    opacity: 0;
+}
+
+body.fade-in-complete {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+header {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ges-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #002966;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #003c99;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002966;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #004aad;
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #004aad;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Center-align and style Vision and Mission headings */
+.vision-mission h3 {
+    text-align: center;
+    color: #004aad;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 1.5rem 0 0.75rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #004aad;
+    background-color: rgba(0, 74, 173, 0.05); /* Subtle background for emphasis */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.vision-mission h3:hover {
+    background-color: rgba(0, 74, 173, 0.1); /* Slight hover effect */
+}
+
+h4 {
+    color: #004aad;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Hero Section with Frosted Glass Effect and Slideshow with Fade Transitions */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white for frosted effect */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+}
+
+.cb-slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: imageAnimation 24s linear infinite 0s;
+}
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url('https://via.placeholder.com/1200x800?text=School+Pupils+1');
+}
+
+.cb-slideshow li:nth-child(2) span {
+    background-image: url('https://via.placeholder.com/1200x800?text=School+Pupils+2');
+    animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+    background-image: url('https://via.placeholder.com/1200x800?text=School+Pupils+3');
+    animation-delay: 12s;
+}
+
+.cb-slideshow li:nth-child(4) span {
+    background-image: url('https://via.placeholder.com/1200x800?text=School+Pupils+4');
+    animation-delay: 18s;
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent rectangular box */
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    max-width: 80%;
+    z-index: 1;
+    margin-top: 1.5rem;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    border-bottom: none;
+    color: white;
+}
+
+.hero-content p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+.home-activities {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.activity-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.activity-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.leader-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.leader.director {
+    flex: 0 0 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.leader-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.leader {
+    flex: 1 1 250px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.leader-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.activity-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.activity {
+    flex: 1 1 250px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.activity-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.training-button {
+    display: inline-block;
+    background-color: #004aad;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+    position: relative; /* Ensure positioning context for the hand icon */
+}
+
+.training-button:hover, .training-button:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+/* Animated hand icon for the Tutorial button */
+.training-button.tutorial-button::before {
+    content: '👈'; /* Hand pointing left emoji */
+    position: absolute;
+    right: -2rem; /* Position to the right of the button */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 1.8rem; /* Larger hand icon */
+    animation: pulseHand 1.5s ease-in-out infinite; /* Apply pulsing animation */
+}
+
+@keyframes pulseHand {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.comments {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    background-color: #e9ecef;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #004aad;
+}
+
+.comment-form {
+    margin-top: 0.5rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 60px;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.comment-form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.comment-form button:hover, .comment-form button:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+#admin-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 300px;
+    margin: 0 auto 1rem;
+}
+
+#admin-password {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#auth-button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+#auth-button:hover, #auth-button:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+#resource-form, #slideshow-image-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+#resource-file, #slideshow-image-file {
+    padding: 0.5rem;
+}
+
+#resource-description, #slideshow-image-description {
+    width: 100%;
+    height: 80px;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#resource-form button, #slideshow-image-form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+#resource-form button:hover, #resource-form button:focus,
+#slideshow-image-form button:hover, #slideshow-image-form button:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+.resource-items, .slideshow-image-items {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-items li, .slideshow-image-items li {
+    background-color: #e9ecef;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.resource-items a, .slideshow-image-items a {
+    color: #004aad;
+    text-decoration: none;
+}
+
+.resource-items a:hover, .resource-items a:focus,
+.slideshow-image-items a:hover, .slideshow-image-items a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.slideshow-image-items img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.resource-items .delete-button, .slideshow-image-items .delete-button {
+    display: none;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.resource-items .delete-button:hover, .resource-items .delete-button:focus,
+.slideshow-image-items .delete-button:hover, .slideshow-image-items .delete-button:focus {
+    background-color: #b71c1c;
+    outline: none;
+}
+
+.school-catalogue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.school-catalogue-table th, .school-catalogue-table td {
+    border: 1px solid #ddd;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+.school-catalogue-table th {
+    background-color: #004aad;
+    color: white;
+}
+
+.school-catalogue-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.school-catalogue-table tr:hover {
+    background-color: #e9ecef;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #002966;
+    color: white;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+#back-to-top {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+#back-to-top:hover, #back-to-top:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+/* Staff Portal Styles */
+.auth-section, .portal-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#staff-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#staff-login-form label {
+    font-weight: bold;
+    color: #004aad;
+}
+
+#staff-login-form input {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#staff-login-form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#staff-login-form button:hover {
+    background-color: #003c99;
+}
+
+#auth-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#auth-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#auth-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.portal-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.message-board, #reports-list, #data-submissions-list {
+    margin-bottom: 1rem;
+}
+
+.message-item, .report-item, .data-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #004aad;
+    border-radius: 5px;
+}
+
+#send-message-form, #submit-report-form, #submit-data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#send-message-form textarea, #submit-report-form textarea, #submit-report-form input, #submit-data-form select, #submit-data-form input, #submit-data-form textarea {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#send-message-form button, #submit-report-form button, #submit-data-form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+#send-message-form button:hover, #submit-report-form button:hover, #submit-data-form button:hover {
+    background-color: #003c99;
+}
+
+#logout-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #b71c1c;
+}
+
+/* Map and Geolocation Styles */
+.map-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#contact-map {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#geolocation-controls {
+    margin-top: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+#get-location, #reset-map {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    min-width: 44px;
+    min-height: 44px;
+    transition: background-color 0.3s ease;
+}
+
+#get-location:hover, #get-location:focus,
+#reset-map:hover, #reset-map:focus {
+    background-color: #003c99;
+    outline: none;
+}
+
+#geolocation-message {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #333;
+    width: 100%;
+}
+
+#geolocation-message.error {
+    color: #721c24;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .ges-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        z-index: 10;
+    }
+
+    .hero {
+        height: 80vh;
+        padding-top: 1.5rem;
+    }
+
+    .hero-content {
+        margin-top: 0.5rem;
+        padding: 1.5rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .home-activities {
+        padding: 0.5rem;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        max-width: 100%;
+        padding: 0.6rem;
+    }
+
+    .activity-img {
+        height: 100px;
+    }
+
+    .leader.director {
+        max-width: 100%;
+    }
+
+    .leader-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader, .activity {
+        flex: 1 1 100%;
+    }
+
+    .leader-img, .activity-img {
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .vision-mission h3 {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.8rem;
+        margin: 1rem 0 0.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .training-button, .comment-form button, #auth-button, #resource-form button, .resource-items .delete-button, #back-to-top, #slideshow-image-form button, .slideshow-image-items .delete-button, #get-location, #reset-map {
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .school-catalogue-table th, .school-catalogue-table td {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .slideshow-image-items img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .auth-section, .portal-section {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .portal-card {
+        padding: 1rem;
+    }
+
+    .map-container {
+        padding: 0.5rem;
+    }
+
+    .training-button.tutorial-button::before {
+        right: -1.5rem; /* Adjust hand icon position for smaller screens */
+        font-size: 1.4rem; /* Slightly smaller hand icon for responsiveness */
+    }
+
+    #contact-map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .ges-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero {
+        height: 70vh;
+        padding-top: 1rem;
+    }
+
+    .hero-content {
+        margin-top: 0.3rem;
+        padding: 1rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .activity-img {
+        height: 80px;
+    }
+
+    .slideshow-image-items img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .vision-mission h3 {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.6rem;
+        margin: 0.8rem 0 0.4rem;
+        background-color: rgba(0, 74, 173, 0.03); /* Lighter background for smaller screens */
+    }
+
+    .training-button.tutorial-button::before {
+        right: -1.2rem; /* Further adjust for very small screens */
+        font-size: 1.2rem; /* Smaller hand icon */
+    }
+
+    #staff-login-form input, #staff-login-form button {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    #contact-map {
+        height: 250px;
+    }
+}

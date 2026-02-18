@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offinso North Education Directorate - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="GES LOGO.png" alt="GES Logo" class="ges-logo">
+            <h1>Offinso North Education Directorate</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leadership.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="news.html" class="dropbtn">News</a>
+                <div class="dropdown-content">
+                    <a href="news.html#brief-history">Brief History</a>
+                    <a href="news.html#staff-schedules">Staff & Schedules</a>
+                    <a href="news.html#ongoing-activities">Ongoing Activities</a>
+                    <a href="news.html#achievements">Achievements</a>
+                    <a href="news.html#performance-analysis">Performance Analysis</a>
+                    <a href="news.html#upcoming-events">Upcoming Events</a>
+                    <a href="news.html#school-catalogue">School Catalogue</a>
+                    <a href="news.html#school-programmes">School Programmes and Residential Status</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="staff-portal.html">Staff Portal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p><strong>Location:</strong> Offinso North District, Akomadan - Ashanti</p>
+            <p><strong>GPS Address:</strong> A6-0008-5006</p>
+            <p><strong>Email:</strong> offinsonorth@ges.gov.gh</p>
+            <p><strong>Phone:</strong> +233 544 769 176 / +233 242 802 400 / +233 244 432 099 / +233 247 981 682</p>
+            <div class="map-container">
+                <div id="contact-map" style="height: 400px;"></div>
+                <div id="geolocation-controls">
+                    <button id="get-location" aria-label="Show my location">Show My Location</button>
+                    <button id="reset-map" aria-label="Reset to default location">Reset to Directorate</button>
+                    <p id="geolocation-message"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Offinso North Education Directorate. All rights reserved.</p>
+        <p>Email: offinsonorth@ges.gov.gh | Phone: +233 242 781 538</p>
+        <button id="back-to-top">↑ Back to Top</button>
+    </footer>
+</body>
+</html>
